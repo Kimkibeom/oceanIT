@@ -2,8 +2,8 @@ package com.oceanIT.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class mainController {
@@ -19,4 +19,11 @@ public class mainController {
 		return "/main/MainView";
 	}
 	
+	@RequestMapping(value="/mainBoardList.do")
+	public String getMainHeadMenu(ModelMap model) throws Exception{
+		//headmenu boardname 목록 가져와서 뿌림
+
+		
+		return "/main/inc/IncHeadMenu";
+	}
 }
