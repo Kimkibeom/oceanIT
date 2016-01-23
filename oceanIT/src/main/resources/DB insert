@@ -1,0 +1,33 @@
+
+insert into MEMBER values('20102010', 'admin name', '20102010');
+
+insert into kind_of_board values(kind_of_board_seq.nextval, '학과소개', null);
+insert into kind_of_board values(kind_of_board_seq.nextval, '교수소개', null);
+insert into kind_of_board values(kind_of_board_seq.nextval, '교과과정', null);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학사정보', null);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학과커뮤니티', null);
+insert into kind_of_board values(kind_of_board_seq.nextval, '게시판', null);
+insert into kind_of_board values(kind_of_board_seq.nextval, '입학안내', null);
+
+insert into kind_of_board values(kind_of_board_seq.nextval, '학과장 인사말', 1);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학과소개', 1);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학과사무실소개', 1);
+insert into kind_of_board values(kind_of_board_seq.nextval, '진로/자격증', 1);
+insert into kind_of_board values(kind_of_board_seq.nextval, '교수진', 2);
+insert into kind_of_board values(kind_of_board_seq.nextval, '교과과정표', 3);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학사안내', 4);
+insert into kind_of_board values(kind_of_board_seq.nextval, '장학안내', 4);
+insert into kind_of_board values(kind_of_board_seq.nextval, '졸업안내', 4);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학사일정', 4);
+insert into kind_of_board values(kind_of_board_seq.nextval, '학생회', 5);
+insert into kind_of_board values(kind_of_board_seq.nextval, '자유게시판', 5);
+insert into kind_of_board values(kind_of_board_seq.nextval, '공지사항', 6);
+insert into kind_of_board values(kind_of_board_seq.nextval, '포토게시판', 6);
+insert into kind_of_board values(kind_of_board_seq.nextval, '자료실', 6);
+insert into kind_of_board values(kind_of_board_seq.nextval, 'Q&A', 6);
+
+
+insert into board values(board_seq.nextval, 'title', 'article', 'writer', sysdate, '255.255.255.255', '12341234', 'email@email.com', 0, 0, 0, 1);
+
+insert into reply values(reply_seq.nextval, 1, 'article', 'writer', sysdate, '12341234');
+
