@@ -1,0 +1,98 @@
+--------------------------------------------------------
+--  DDL for Table BOARD
+--------------------------------------------------------
+
+  CREATE TABLE "BOARD" 
+   (	"BOARD_NO" NUMBER(10,0), 
+	"TITLE" VARCHAR2(20 BYTE), 
+	"ARTICLE" VARCHAR2(500 BYTE), 
+	"WRITER" VARCHAR2(20 BYTE), 
+	"REG_DATE" DATE DEFAULT sysdate, 
+	"IP" VARCHAR2(20 BYTE), 
+	"PASSWORD" VARCHAR2(20 BYTE), 
+	"EMAIL" VARCHAR2(20 BYTE), 
+	"SECRET_CHECK" NUMBER(1,0) DEFAULT 0, 
+	"READ_CNT" NUMBER(10,0) DEFAULT 0, 
+	"HIT" NUMBER(10,0) DEFAULT 0, 
+	"KIND_NO" NUMBER(10,0)
+   );
+--------------------------------------------------------
+--  DDL for Table KIND_OF_BOARD
+--------------------------------------------------------
+
+  CREATE TABLE "KIND_OF_BOARD" 
+   (	"KIND_NO" NUMBER(10,0), 
+	"NAME" VARCHAR2(20 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table MEMBER
+--------------------------------------------------------
+
+  CREATE TABLE "MEMBER" 
+   (	"MEMBER_ID" NUMBER(8,0), 
+	"NAME" VARCHAR2(20 BYTE), 
+	"PASSWORD" VARCHAR2(20 BYTE)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table REPLY
+--------------------------------------------------------
+
+  CREATE TABLE "REPLY" 
+   (	"REPLY_NO" NUMBER(10,0), 
+	"BOARD_NO" NUMBER(10,0), 
+	"ARTICLE" VARCHAR2(200 BYTE), 
+	"WRITER" VARCHAR2(20 BYTE), 
+	"REG_DATE" DATE DEFAULT sysdate, 
+	"PASSWORD" VARCHAR2(20 BYTE)
+   ) ;
+--------------------------------------------------------
+--  Constraints for Table BOARD
+--------------------------------------------------------
+
+  ALTER TABLE "BOARD" ADD CONSTRAINT "board_pk" PRIMARY KEY ("BOARD_NO");
+  ALTER TABLE "BOARD" MODIFY ("KIND_NO" NOT NULL ENABLE);
+  ALTER TABLE "BOARD" MODIFY ("EMAIL" NOT NULL ENABLE);
+  ALTER TABLE "BOARD" MODIFY ("PASSWORD" NOT NULL ENABLE);
+  ALTER TABLE "BOARD" MODIFY ("IP" NOT NULL ENABLE);
+  ALTER TABLE "BOARD" MODIFY ("WRITER" NOT NULL ENABLE);
+  ALTER TABLE "BOARD" MODIFY ("TITLE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table KIND_OF_BOARD
+--------------------------------------------------------
+
+  ALTER TABLE "KIND_OF_BOARD" ADD CONSTRAINT "kind_no_pk" PRIMARY KEY ("KIND_NO");
+  ALTER TABLE "KIND_OF_BOARD" MODIFY ("NAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MEMBER
+--------------------------------------------------------
+
+  ALTER TABLE "MEMBER" ADD CONSTRAINT "member_pk" PRIMARY KEY ("MEMBER_ID");
+  ALTER TABLE "MEMBER" MODIFY ("PASSWORD" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table REPLY
+--------------------------------------------------------
+
+  ALTER TABLE "REPLY" ADD CONSTRAINT "reply_no" PRIMARY KEY ("REPLY_NO");
+  ALTER TABLE "REPLY" MODIFY ("PASSWORD" NOT NULL ENABLE);
+  ALTER TABLE "REPLY" MODIFY ("WRITER" NOT NULL ENABLE);
+  ALTER TABLE "REPLY" MODIFY ("BOARD_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table BOARD
+--------------------------------------------------------
+
+  ALTER TABLE "BOARD" ADD CONSTRAINT "kind_of_board_fk" FOREIGN KEY ("KIND_NO")
+	  REFERENCES "KIND_OF_BOARD" ("KIND_NO") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table REPLY
+--------------------------------------------------------
+
+  ALTER TABLE "REPLY" ADD CONSTRAINT "reply_fk_board" FOREIGN KEY ("BOARD_NO")
+	  REFERENCES "BOARD" ("BOARD_NO") ENABLE;
+    
+--------------------------------------------------------
+--  Sequence DDL
+--------------------------------------------------------
+create sequence board_seq;
+create sequence kind_of_board_seq;
+create sequence reply_seq;
+    
