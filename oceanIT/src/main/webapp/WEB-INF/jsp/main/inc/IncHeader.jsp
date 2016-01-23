@@ -14,5 +14,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="logoarea">
-	<h1><a href="<c:url value='/'/>uat/uia/actionMain.do"><img src="<c:url value='/'/>images/header/logo.jpg" alt="템플릿 샘플 내부업무 사이트" /></a></h1>
+	<h1><a href="<c:url value='/'/>actionMain.do"><img src="<c:url value='/'/>images/header/logo.jpg" alt="템플릿 샘플 내부업무 사이트" /></a></h1>
 </div>
