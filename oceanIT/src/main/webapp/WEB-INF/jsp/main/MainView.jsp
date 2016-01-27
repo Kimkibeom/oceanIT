@@ -32,6 +32,15 @@
 	<div id="header"><c:import url="/PageLink.do?link=main/inc/IncHeader" /></div>
 	<div id="topnavi"><c:import url="/mainBoardList.do" /></div>
 	<!-- header 끝 -->
+	
+	<div id="container">
+		<!-- content 시작 -->
+		<div id="content">
+		
+		</div>
+		<!-- content 끝 -->
+	</div>
+	<div id="footer"><c:import url="/PageLink.do?link=main/inc/IncFooter" /></div>
 </div>
 
 </body>
