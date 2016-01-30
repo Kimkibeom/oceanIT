@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>학과소개</title>
+<title>교과과정</title>
 <link href="<c:url value='/css/common.css'/>" rel="stylesheet" type="text/css" >
 </head>
 <body>
@@ -22,6 +22,6 @@
 	<div id="topnavi"><c:import url="/mainBoardList.do" /></div>
 	<!-- header 끝 -->
 </div>
-학과소개
+교과과정
 </body>
 </html>
