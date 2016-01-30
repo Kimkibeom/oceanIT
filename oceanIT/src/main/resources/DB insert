@@ -1,7 +1,7 @@
 
 insert into MEMBER values('20102010', 'admin name', '20102010');
 
-insert into kind_of_board values(kind_of_board_seq.nextval, '학과소개', null);
+insert into kind_of_board values(1, '학과소개', null);
 insert into kind_of_board values(kind_of_board_seq.nextval, '교수소개', null);
 insert into kind_of_board values(kind_of_board_seq.nextval, '교과과정', null);
 insert into kind_of_board values(kind_of_board_seq.nextval, '학사정보', null);
@@ -27,7 +27,7 @@ insert into kind_of_board values(kind_of_board_seq.nextval, '자료실', 6);
 insert into kind_of_board values(kind_of_board_seq.nextval, 'Q&A', 6);
 
 
-insert into board values(board_seq.nextval, 'title', 'article', 'writer', sysdate, '255.255.255.255', '12341234', 'email@email.com', 0, 0, 0, 1);
+insert into board values(1, 'title', 'article', 'writer', sysdate, '255.255.255.255', '12341234', 'email@email.com', 0, 0, 0, 1);
 
 insert into reply values(reply_seq.nextval, 1, 'article', 'writer', sysdate, '12341234');
 

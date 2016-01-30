@@ -17,6 +17,8 @@ public class LoginServiceImpl {
 	private LoginDAO loginDAO;
 	
 	public LoginVO actionLogin(LoginVO vo){
-		return loginDAO.actionLogin(vo);
+		LoginVO testVo = loginDAO.actionLogin(vo);
+		
+		return testVo;
 	}
 }

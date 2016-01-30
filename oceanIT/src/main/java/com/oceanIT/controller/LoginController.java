@@ -44,4 +44,10 @@ public class LoginController {
 		}
 		return "/main/MainView";
 	}
+	
+	@RequestMapping(value="/logout.do")
+	public String setLogout(HttpServletRequest request){
+		request.getSession().invalidate();
+		return "/main/MainView";
+	}
 }
