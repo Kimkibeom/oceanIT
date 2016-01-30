@@ -12,7 +12,7 @@
      
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/**"/>
+            <mvc:mapping path="/sample/*"/>
             <bean id="loggerInterceptor" class="com.oceanIT.common.logger.LoggerInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>

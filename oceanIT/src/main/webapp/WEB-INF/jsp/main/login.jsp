@@ -25,8 +25,7 @@
 <link href="<c:url value='/css/login.css'/>" rel="stylesheet" type="text/css" >
 <script type="text/javascript">
 function actionLogin() {
-
-    if (document.loginForm.id.value =="") {
+    if (document.loginForm.member_id.value =="") {
         alert("학번을 입력하세요");
         return false;
     } else if (document.loginForm.password.value =="") {
@@ -90,14 +89,14 @@ function getid(form) {
 
                     <div id="login_title_div"><img alt="LOGIN 해양IT학과에 오신 것을 환영합니다" src="<c:url value='/' />images/login/img_logintitle.gif" /></div>        
                         <div class="user_login">
-                        <form:form id="loginForm" name="loginForm" method="post">
+                        <form id="loginForm" name="loginForm" method="post">
                             <fieldset><legend>조건정보 영역</legend>
                                 
                                 <div class="user_login_ultop">
                                     <table border="0">
                                     	<tr>
                                     		<td>학번</td>
-                                    		<td><input type="text" class="input_style" title="아이디를 입력하세요." id="id" name="id" maxlength="8"/></td>
+                                    		<td><input type="text" class="input_style" title="아이디를 입력하세요." id="member_id" name="member_id" maxlength="8"/></td>
                                     		<td rowspan="2"><input type="image" alt="로그인" onclick="javascript:actionLogin()" src="<c:url value='/'/>images/login/btn_login.gif"  /></td>
                                     	</tr>
                                     	<tr>
@@ -114,7 +113,7 @@ function getid(form) {
                             <input type="hidden" name="message" value="${message}" />
                             <input type="hidden" name="userSe"  value="USR"/>
                             <input name="j_username" type="hidden"/>
-                       </form:form>
+                       </form>
                         </div>
 		</div>
 		<!-- content 끝 -->
