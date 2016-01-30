@@ -13,11 +13,15 @@ public class LoggerInterceptor extends HandlerInterceptorAdapter {
      
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        if (log.isDebugEnabled()) {
-            log.debug("======================================          START         ======================================");
-            log.debug(" Request URI \t:  " + request.getRequestURI());
+    	log.debug("======================================          START         ======================================");
+        log.debug(" Request URI \t:  " + request.getRequestURI());
+        
+        if(request.getSession().getAttribute("user") == null){
+        	response.sendRedirect("/controller/PageLink.do?link=main/login");
+        	return false;
         }
-        return super.preHandle(request, response, handler);
+        
+        return true;
     }
      
     @Override
