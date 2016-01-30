@@ -1,3 +1,8 @@
+drop table member;
+drop table reply;
+drop table board;
+drop table kind_of_board;
+
 --------------------------------------------------------
 --  DDL for Table BOARD
 --------------------------------------------------------
@@ -22,7 +27,7 @@
 
   CREATE TABLE "KIND_OF_BOARD" 
    (	"KIND_NO" NUMBER(10,0), 
-	"NAME" VARCHAR2(20 BYTE)
+	"NAME" VARCHAR2(25 BYTE)
    ) ;
 --------------------------------------------------------
 --  DDL for Table MEMBER
@@ -92,7 +97,16 @@
 --------------------------------------------------------
 --  Sequence DDL
 --------------------------------------------------------
+drop sequence board_seq;
+drop sequence kind_of_board_seq;
+drop sequence reply_seq;
 create sequence board_seq;
 create sequence kind_of_board_seq;
 create sequence reply_seq;
+
     
+    
+  alter table kind_of_board add ("parent" NUMBER(10,0));
+
+  ALTER TABLE kind_of_board ADD CONSTRAINT "kind_of_board_parent" FOREIGN KEY ("parent")
+	  REFERENCES kind_of_board ("KIND_NO") ;
