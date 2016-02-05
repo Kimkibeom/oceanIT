@@ -18,5 +18,5 @@
 
 <pre>
 <p align="right">
-<c:if test="${sessionScope.user eq null}"><a href="<c:url value='/'/>PageLink.do?link=main/login"><img src="<c:url value='/'/>images/header/login.JPG" alt="로그인" /></a></c:if>&nbsp; &nbsp;<a href="http://www.hoseo.ac.kr"><img src="<c:url value='/'/>images/header/hoseo.JPG" alt="학교 홈페이지로 이동" /></a></p>
+<c:choose><c:when test="${sessionScope.user eq null}"><a href="<c:url value='/'/>PageLink.do?link=main/login"><img src="<c:url value='/'/>images/header/login.JPG" alt="로그인" /></a></c:when><c:otherwise><a href="<c:url value='/'/>PageLink.do?link=main/logout"><img src="<c:url value='/'/>images/header/logout.JPG" alt="로그아웃" /></a></c:otherwise></c:choose>&nbsp; &nbsp;<a href="http://www.hoseo.ac.kr"><img src="<c:url value='/'/>images/header/hoseo.JPG" alt="학교 홈페이지로 이동" /></a></p>
 </pre>

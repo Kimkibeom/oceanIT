@@ -100,9 +100,9 @@ drop table kind_of_board;
 drop sequence board_seq;
 drop sequence kind_of_board_seq;
 drop sequence reply_seq;
-create sequence board_seq;
-create sequence kind_of_board_seq;
-create sequence reply_seq;
+create sequence board_seq start with 1 increment by 1 maxvalue 10000 nocache nocycle;
+create sequence kind_of_board_seq start with 1 increment by 1 maxvalue 10000 nocache nocycle;
+create sequence reply_seq start with 1 increment by 1 maxvalue 10000 nocache nocycle;
 
     
     
