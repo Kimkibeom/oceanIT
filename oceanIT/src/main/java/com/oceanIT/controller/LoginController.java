@@ -37,6 +37,7 @@ public class LoginController {
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("member_id", resultVO.getMember_id());
 			map.put("password", resultVO.getPassword());
+			request.getSession().setAttribute("LoginVO", resultVO);
 			request.getSession().setAttribute("user", map);
 			model.addAttribute("LoginVO", resultVO);
 			model.addAttribute("userIP", userIP);

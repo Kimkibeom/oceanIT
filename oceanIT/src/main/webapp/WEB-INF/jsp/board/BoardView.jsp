@@ -15,12 +15,12 @@
 <title>게시판</title>
 <link href="<c:url value='/css/common.css'/>" rel="stylesheet"
 	type="text/css">
-<!-- <link rel="stylesheet"
+<link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	 -->
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -38,43 +38,7 @@
 			<c:import url="/mainBoardList.do" />
 		</div>
 		<!-- header 끝 -->
-		<div>
-			<!--table  -->
-			<div class="container">
-				<div id="leftmenu">
-					<c:import url="/LeftMenu.do?boardno=${sessionScope.no }" />
-				</div>
-				<div id="content">
-				<h2>학과 게시판</h2>
-				<div class="default_tablestyle">
-				<table cellpadding="0" cellspacing="0">
-					<thead>
-						<tr>
-							<th class="f_field" nowrap="nowrap">번호</th>
-							<th nowrap="nowrap">제목</th>
-							<th nowrap="nowrap">작성일</th>
-							<th nowrap="nowrap">작성자</th>
-							<th nowrap="nowrap">조회수</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach var="bd" items="${BoardList}" varStatus="status">
-							<tr>
-								<td nowrap="nowrap"><c:out value="${bd.boardNo}"></c:out></td>
-								<td nowrap="nowrap"><a
-									href="/controller/BoardView.do?boardNo=${bd.boardNo }"><c:out
-											value="${bd.title}"></c:out></a></td>
-								<td id="reg_date" nowrap="nowrap"><c:out value="${bd.regDate}"></c:out></td>
-								<td nowrap="nowrap"><c:out value="${bd.writer}"></c:out></td>
-								<td nowrap="nowrap"><c:out value="${bd.readCnt}"></c:out></td>
-						</c:forEach>
-					</tbody>
-				</table>
-				</div>
-				</div>
-			</div>
-			<div id="footer"><c:import url="/PageLink.do?link=main/inc/IncFooter" /></div>
-		</div>
+		<div>Board View : ${boardNo }</div>
 	</div>
 	<%-- 	list.get :
 	<%=list.get(0).toString()%> --%>

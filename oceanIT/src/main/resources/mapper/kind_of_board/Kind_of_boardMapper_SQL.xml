@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ 
+ <mapper namespace="kind_of_board">
+ 	
+ 	<resultMap type="com.oceanIT.vo.Kind_of_boardVO" id="Kind_of_board_Result">
+ 		<result property="kind_no" column="KIND_NO" />
+ 		<result property="name" column="NAME" />
+ 		<result property="parent_no" column="PARENT_NO" />
+ 	</resultMap>
+ 	
+ 	<select id="loadMenuList" resultMap="Kind_of_board_Result" parameterType="int">
+ 		<![CDATA[
+            SELECT
+                KIND_NO,
+                NAME,
+                PARENT_NO
+            FROM
+                KIND_OF_BOARD
+            WHERE
+                KIND_NO = #{boardNo} OR PARENT_NO = #{boardNo}
+        ]]>
+ 	</select>
+ 	
+ </mapper>

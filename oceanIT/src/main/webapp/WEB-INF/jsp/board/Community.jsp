@@ -21,7 +21,15 @@
 	<div id="header"><c:import url="/PageLink.do?link=main/inc/IncHeader" /></div>
 	<div id="topnavi"><c:import url="/mainBoardList.do" /></div>
 	<!-- header 끝 -->
+		<div class="container">
+			<div id="leftmenu">
+				<c:import url="/LeftMenu.do?boardno=${sessionScope.no }" />
+			</div>
+			<div id="content">
+			
+			</div>
+		</div>
+		<div id="footer"><c:import url="/PageLink.do?link=main/inc/IncFooter" /></div>
 </div>
-학과 커뮤니티
 </body>
 </html>

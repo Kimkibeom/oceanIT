@@ -8,12 +8,12 @@
 </head>
 <body>
 <ul>
-    <li><a href="<%=request.getContextPath()%>/DepartmentBoard.do">학과소개</a></li>  
-    <li><a href="<%=request.getContextPath()%>/ProfessorIntro.do">교수소개</a></li>
-    <li><a href="<%=request.getContextPath()%>/Curriculum.do">교과과정</a></li>
+    <li><a href="<%=request.getContextPath()%>/DepartmentBoard.do?no=1">학과소개</a></li>  
+    <li><a href="<%=request.getContextPath()%>/ProfessorIntro.do?no=2">교수소개</a></li>
+    <li><a href="<%=request.getContextPath()%>/Curriculum.do?no=3">교과과정</a></li>
     <li><a href="http://www.hoseo.ac.kr/CmsHome/administration_03_01.eznic">학사정보</a></li>
-    <li><a href="<%=request.getContextPath()%>/Community.do">학과커뮤니티</a></li>
-    <li><a href="<%=request.getContextPath()%>/Board.do">게시판</a></li>
+    <li><a href="<%=request.getContextPath()%>/Community.do?no=5">학과커뮤니티</a></li>
+    <li><a href="<%=request.getContextPath()%>/Board.do?no=6">게시판</a></li>
     <li><a href="http://ipsi.hoseo.ac.kr/CmsHome/MainDefault.eznic">입학안내</a></li>
 </ul>
 </body>
