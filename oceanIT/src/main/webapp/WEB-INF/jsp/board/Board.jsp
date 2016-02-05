@@ -15,12 +15,6 @@
 <title>게시판</title>
 <link href="<c:url value='/css/common.css'/>" rel="stylesheet"
 	type="text/css">
-<!-- <link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	 -->
 </head>
 <body>
 
@@ -60,6 +54,7 @@
 					<tbody>
 						<c:forEach var="bd" items="${BoardList}" varStatus="status">
 							<tr>
+
 								<td nowrap="nowrap"><c:out value="${bd.boardNo}"></c:out></td>
 								<td nowrap="nowrap"><a
 									href="/controller/BoardView.do?boardNo=${bd.boardNo }"><c:out

@@ -28,4 +28,10 @@ public class BoardDAO {
 		return sqlSession.selectList(stmt);
 	}
 
+	public BoardVO selectBoardByBoardNo(int boardNo) {
+		String stmt = nameSpace + "selectBoardByBoardNo";
+//		log.info("BoardList DAO board : " );
+		return sqlSession.selectOne(stmt, boardNo);
+	}
+
 }

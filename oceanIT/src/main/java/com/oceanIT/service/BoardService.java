@@ -26,4 +26,9 @@ public class BoardService {
 
 		return bdao.selectBoardList();
 	}
+
+	public BoardVO selectBoardByBoardNo(int boardNo) {
+		return bdao.selectBoardByBoardNo(boardNo);
+
+	}
 }
