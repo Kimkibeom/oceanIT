@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>교수소개</title>
+<title>학과소개</title>
 <link href="<c:url value='/css/common.css'/>" rel="stylesheet"
 	type="text/css">
 </head>
@@ -26,29 +26,27 @@
 			<c:import url="/mainBoardList.do" />
 		</div>
 		<!-- header 끝 -->
-		<div class="container">
+		<div style="padding: 10px;" class="container">
+			<h2>진로/자격증</h2>
+			<hr>
 			<div>
-				<h2>교수소개</h2>
-				<hr>
-				<br>
-				<table>
-					<c:forEach begin="0" end="4" var="linecnt">
-						<tr>
-							<c:forEach begin="1" end="2" var="profsno">
-								<th style="border: solid #d1d1d1 1px; width: 46%; margin: 10px">
-									<div style="border: padding: 5px; width: 300px; height: 100px">
-										<img style="wdith: 100%; height: 100%;"
-											src="<c:url value='/'/>images/boards/professorcards/professor${linecnt*2+profsno}.png">
-									</div>
-								</th>
-							</c:forEach>
-						</tr>
-					</c:forEach>
+				<h4>졸업후 진로</h4>
+				<ul>
+					<li>- 해양정보통신분야 공무원, 해양관련연구소 및 협회
+					<li>- 항만공사 및 항만터미널 회사
+					<li>- 조선회사, 해운회사 등 해양관련 산업체
+					<li>- 선박이나 해양 구조물 생산 및 판매 업체
+					<li>- 물류정보통신관련 산업체 - 통신시스템, 휴대용 멀티미디어 기기, 모바일소프트웨어, 인터넷,
+						네트워크관련 업체
+					<li>- 연계교육을 통한 선박 항해사, 기관사, 통신사 등 다양한 분야로 진출 가능
+				</ul>
+				<br> <br> <br>
 
-
-				</table>
+				<h4>자격증</h4>
+				<div>해양조사기사, 조선기사, 무선설비기사, 항로표지기사, 정보처리기사, 전파전자통신기사, 전자기사</div>
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>

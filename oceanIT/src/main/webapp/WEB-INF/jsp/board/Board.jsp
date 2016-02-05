@@ -56,7 +56,9 @@
 						<c:forEach var="bd" items="${BoardList}" varStatus="status">
 							<tr>
 								<td><c:out value="${bd.boardNo}"></c:out></td>
-								<td><c:out value="${bd.title}"></c:out></td>
+								<td><a
+									href="/controller/BoardView.do?boardNo=${bd.boardNo }"><c:out
+											value="${bd.title}"></c:out></a></td>
 								<td id="reg_date"><c:out value="${bd.strDate}"></c:out></td>
 								<td><c:out value="${bd.writer}"></c:out></td>
 								<td><c:out value="${bd.readCnt}"></c:out></td>

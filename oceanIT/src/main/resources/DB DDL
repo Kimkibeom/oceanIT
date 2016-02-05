@@ -106,7 +106,7 @@ create sequence reply_seq start with 1 increment by 1 maxvalue 10000 nocache noc
 
     
     
-  alter table kind_of_board add ("parent" NUMBER(10,0));
+  alter table kind_of_board add (parent_no NUMBER(10,0));
 
-  ALTER TABLE kind_of_board ADD CONSTRAINT "kind_of_board_parent" FOREIGN KEY ("parent")
+  ALTER TABLE kind_of_board ADD CONSTRAINT "kind_of_board_parent" FOREIGN KEY (parent_no)
 	  REFERENCES kind_of_board ("KIND_NO") ;
