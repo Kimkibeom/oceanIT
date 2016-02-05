@@ -20,7 +20,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -57,7 +57,7 @@
 							<tr>
 								<td><c:out value="${bd.boardNo}"></c:out></td>
 								<td><c:out value="${bd.title}"></c:out></td>
-								<td id="reg_date"><c:out value="${bd.regDate}"></c:out></td>
+								<td id="reg_date"><c:out value="${bd.strDate}"></c:out></td>
 								<td><c:out value="${bd.writer}"></c:out></td>
 								<td><c:out value="${bd.readCnt}"></c:out></td>
 						</c:forEach>

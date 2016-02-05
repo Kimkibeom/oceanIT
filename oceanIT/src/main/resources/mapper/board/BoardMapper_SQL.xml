@@ -4,7 +4,8 @@
 <mapper namespace="boardMapper">
 
 	<select id="selectBoardList" resultType="com.oceanIT.vo.BoardVO">
-		select * from board
+		select *
+		from board
 	</select>
 
 </mapper>

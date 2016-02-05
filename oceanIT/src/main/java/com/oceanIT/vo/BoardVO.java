@@ -1,9 +1,10 @@
 package com.oceanIT.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BoardVO {
-
+	SimpleDateFormat fmt = new SimpleDateFormat("yyyy. MM. dd HH:MM:SS");
 	private int boardNo;
 	private String title;
 	private String article;
@@ -16,6 +17,15 @@ public class BoardVO {
 	private int readCnt;
 	private int hit;
 	private int kindNo;
+	private String strDate;
+
+	public String getStrDate() {
+		return strDate;
+	}
+
+	public void setStrDate(String strDate) {
+		this.strDate = strDate;
+	}
 
 	public BoardVO(int boardNo, String title, String article, String writer, Date regDate, String ip, String password,
 			String email, int secretCheck, int readCnt, int hit, int kindNo) {
@@ -32,6 +42,7 @@ public class BoardVO {
 		this.readCnt = readCnt;
 		this.hit = hit;
 		this.kindNo = kindNo;
+		strDate = fmt.format(regDate);
 	}
 
 	public BoardVO() {
@@ -76,6 +87,7 @@ public class BoardVO {
 	}
 
 	public void setRegDate(Date regDate) {
+		strDate = fmt.format(regDate);
 		this.regDate = regDate;
 	}
 

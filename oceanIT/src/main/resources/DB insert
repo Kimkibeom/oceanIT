@@ -24,7 +24,7 @@ insert into kind_of_board values(kind_of_board_seq.nextval, '자유게시판', 5
 insert into kind_of_board values(kind_of_board_seq.nextval, '공지사항', 6);
 insert into kind_of_board values(kind_of_board_seq.nextval, '포토게시판', 6);
 insert into kind_of_board values(kind_of_board_seq.nextval, '자료실', 6);
-insert into kind_of_board values(kind_of_board_seq.nextval, 'Q&A', 6);
+insert into kind_of_board values(kind_of_boardgv_seq.nextval, 'Q&A', 6);
 
 
 insert into board values(board_seq.nextval, 'title', 'article', 'writer', sysdate, '255.255.255.255', '12341234', 'email@email.com', 0, 0, 0, 1);
