@@ -39,7 +39,7 @@
 					<c:import url="/LeftMenu.do?boardno=${sessionScope.no }" />
 				</div>
 				<div id="content">
-				<h2>학과 게시판</h2>
+				<h2>공지사항</h2>
 				<div class="default_tablestyle">
 				<table cellpadding="0" cellspacing="0">
 					<thead>

@@ -22,6 +22,11 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+<style>
+div {
+	border: solid 1px;
+}
+</style>
 <body>
 
 	<%
@@ -39,7 +44,35 @@
 		</div>
 		<!-- header 끝 -->
 		<div>Board View : ${board }</div>
-		
+		<div>
+			<div>No.${board.boardNo }</div>
+			<!-- 테이블 -->
+			<div>
+				<!-- 제목 -->
+				<div style="background: gray">
+					<div
+						style="display: inline-block; color: skyblue; font-size: 20px; width: 78%">${board.title }</div>
+					<div style="display: inline-block; width: 19%; text-align: right;">작성자
+						: ${board.writer }</div>
+				</div>
+				<!-- 작성일 -->
+				<div style="text-align: right;">
+					<div style="display: inline-block; width: 40%;">작성일 :
+						${board.regDate }</div>
+					<div style="display: inline-block; width: 8%;">hit :
+						${board.readCnt }</div>
+					<div style="display: inline-block; width: 20%;">ip :
+						${board.ip }</div>
+				</div>
+				<!-- 컨텐츠 -->
+				<div>
+					<div>${board.article }</div>
+				</div>
+
+			</div>
+		</div>
+
+
 	</div>
 	<%-- 	list.get :
 	<%=list.get(0).toString()%> --%>

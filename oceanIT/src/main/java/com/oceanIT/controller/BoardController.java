@@ -28,7 +28,7 @@ public class BoardController {
 
 	@RequestMapping(value = "/BoardView.do")
 	public String gotoBoardView(Model model, @RequestParam("boardNo") int boardNo) throws Exception {
-		bservice.selectBoardByBoardNo(boardNo);
+		model.addAttribute("board", bservice.selectBoardByBoardNo(boardNo));
 		return "/board/BoardView";
 	}
 
@@ -60,9 +60,17 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/Community.do")
-	public String gotoCommunity(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
+	public String gotoCommunity(Model model, HttpServletRequest request, @RequestParam("no") String no)
+			throws Exception {
 		request.getSession().setAttribute("no", no);
+		model.addAttribute("BoardList", bservice.selectBoardList());
 		return "/board/Community";
+	}
+
+	@RequestMapping(value = "/CommunityView.do")
+	public String gotoCommunityView(Model model, @RequestParam("boardNo") int boardNo) throws Exception {
+		model.addAttribute("board", bservice.selectBoardByBoardNo(boardNo));
+		return "/board/CommunityView";
 	}
 
 	@RequestMapping(value = "/Board.do")
