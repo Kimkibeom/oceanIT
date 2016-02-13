@@ -1,7 +1,13 @@
 package com.oceanIT.controller;
 
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,14 +15,19 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.oceanIT.service.BoardService;
+import com.oceanIT.service.ProfessorServiceImpl;
+import com.oceanIT.vo.ProfessorVO;
 
 @Controller
 public class BoardController {
 	@Autowired
 	BoardService bservice;
+	
+	@Resource(name="professorService")
+	private ProfessorServiceImpl professorService;
 
 	private Logger log = Logger.getLogger(this.getClass());
 
@@ -48,11 +59,29 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/ProfessorIntro.do")
-	public String gotoProfsIntro(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
+	public String gotoProfsIntro(HttpServletRequest request, @RequestParam("no") String no, ModelMap model) throws Exception {
 		request.getSession().setAttribute("no", no);
+		List<ProfessorVO> list = professorService.getProfessorList();
+		model.addAttribute("ProfessorVO", list);
 		return "/board/ProfessorIntro";
 	}
-
+	
+	@RequestMapping(value = "/selectProfessor.do")
+	public void selectProfessor(@RequestParam Map<String,String> paramMap, ModelMap model, HttpServletResponse response) throws Exception{
+		Map<String, Object> map = professorService.selectProfessor(paramMap);
+		
+		Gson gson = new Gson();
+		PrintWriter pw = null;
+		response.setContentType("application/json");
+		response.setContentType("text/xml;charset=utf-8");
+		response.setHeader("Cache-Control", "no-cache");
+		pw = new PrintWriter(response.getWriter());
+		pw.println(gson.toJson(map));
+		pw.flush();
+		pw.close();
+	}
+	
+	
 	@RequestMapping(value = "/Curriculum.do")
 	public String gotoCurriculum(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
 		request.getSession().setAttribute("no", no);
