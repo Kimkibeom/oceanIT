@@ -54,7 +54,6 @@
 					<tbody>
 						<c:forEach var="bd" items="${BoardList}" varStatus="status">
 							<tr>
-
 								<td nowrap="nowrap"><c:out value="${bd.boardNo}"></c:out></td>
 								<td nowrap="nowrap"><a
 									href="/controller/BoardView.do?boardNo=${bd.boardNo }"><c:out
@@ -65,6 +64,18 @@
 						</c:forEach>
 					</tbody>
 				</table>
+				<div id="Page_Select" align="center">
+					<table>
+						<tr>
+							<select id="Select_Name">
+								<option value="Name"> 제목 </option>
+								<option value="Name_Content" > 제목+내용 </option>
+							</select>
+							&nbsp;<input type="text" size="30">
+							&nbsp;<input type="button" value="확인">
+						</tr>
+					</table>
+				</div>
 				</div>
 				</div>
 			</div>

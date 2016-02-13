@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="professor">
+	
+	<resultMap type="com.oceanIT.vo.ProfessorVO" id="ProfessorResult">
+ 		<result property="professor_no" column="PROFESSOR_NO" />
+ 		<result property="professor_name" column="PROFESSOR_NAME" />
+ 		<result property="professor_phone" column="PROFESSOR_PHONE" />
+ 		<result property="professor_email" column="PROFESSOR_EMAIL" />
+ 	</resultMap>
+
+	<select id="getProfessorList" resultMap="ProfessorResult">
+		<![CDATA[
+		SELECT * FROM PROFESSOR
+		]]>
+	</select>
+	
+	<select id="selectProfessor" parameterType="int" resultMap="ProfessorResult">
+		<![CDATA[
+		SELECT * FROM PROFESSOR WHERE PROFESSOR_NO = #{professor_no}
+		]]>
+	</select>
+	
+</mapper>

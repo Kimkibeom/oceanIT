@@ -26,6 +26,175 @@ insert into kind_of_board values(kind_of_board_seq.nextval, '포토게시판', 6
 insert into kind_of_board values(kind_of_board_seq.nextval, '자료실', 6);
 insert into kind_of_board values(kind_of_boardgv_seq.nextval, 'Q&A', 6);
 
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '문대철', '041-540-5683', 'dtmoon@hoseo.edu', 'DaiTchul Moon');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '박노경', '041-540-5685', 'nkpark@hoseo.edu', 'NhoKyung Park');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '고학림', '041-540-5691', 'hlko@hoseo.edu', 'HakLim Ko');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '송명렬', '041-540-5692', 'mlsong@hoseo.edu', 'Myong Lyol Song');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '김용관', '041-540-5688', 'ykkim@hoseo.edu', 'YongKwan Kim');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '정백호', '041-540-5690', 'bhjung@hoseo.edu', 'BaekHo Jung');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '진현준', '041-540-5689', 'hjjin@hoseo.edu', 'HyunJoon Jin');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '조용갑', '041-540-5755', 'ykcho@hoseo.edu', 'Yong-Kap Cho');
+insert into PROFESSOR(professor_no, professor_name, professor_phone, professor_email, professor_eng_name) values(professor_seq.nextval, '이호준', '041-540-5684', 'hojoon@hoseo.edu', 'HoJoon Lee');
+
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(1, '숭실대', '고려대', '고려대', '전자공학과', '전자공학과', '전자공학과', '공학사', '공학석사', '공학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(2, '고려대', '고려대', '고려대', '전자공학과', '전자공학과', '전자공학과', '공학사', '공학석사', '공학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(3, '숭실대', 'Fairlegh Dickinson Univ.', 'North Carolina State Univ.', '전자공학', '전기, 컴퓨터공학', '전자공학과', '공학사', '공학석사', '공학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(4, '연세대', '연세대', '연세대', '전자공학', '전자공학', '전자공학', '공학사', '공학석사', '공학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(5, '서울대', '서울대', '서울대', '제어계측공학', '제어계측공학', '제어계측공학', '공학사', '공학석사', '공학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(6, '경북대', '경북대', '경북대', '전자공학', '통신공학', '전파공학', '공학사', '공학석사', '공학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(7, '고려대', '고려대', 'Lehigh Univ.', '전자공학과', '전자공학과', '전산학', '공학사', '공학석사(컴퓨터공)', 'Ph. D');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(8, '명지대', '중앙대', '한국해양대학교', '-', '물류정보', '해운 및 해상보험', '학사', '경영학석사', '경영학박사');
+insert into GRADUATE(PROFESSOR_NO, COLLEGE_GRADUATE_SCHOOL_NAME , MASTER_GRADUATE_SCHOOL_NAME , DOCTOR_GRADUATE_SCHOOL_NAME , COLLEGE_GRADUATE_MAJOR_NAME , MASTER_GRADUATE_MAJOR_NAME , DOCTOR_GRADUATE_MAJOR_NAME , COLLEGE_GRADUATE_NAME , MASTER_GRADUATE_NAME , DOCTOR_GRADUATE_NAME)
+values(9, '성균관대', '성균관대', '성균관대', '전자공학과', '전자공학과', '전자공학과', '공학사', '공학석사', '공학박사');
+
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Brightness 기능을 갖는 컬러 스페이스 컨버터 설계에 관한연구', '한국음향학회지, 17권, 1호, pp.1-24-30,1998.01');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'A study of Adaptive De-interlacing Up-Conversion for Enhancement Horizontal and Vertical Edges', '대한전자공학회 논문집-S, 35-S권, 2호, pp.1-262-273,1998.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'MTA 코드를 적용한 Testable CAM 설계에 관한연구', '대한전자공학회 논문지, 35권, 2호, pp.1-262-273,1998.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Co90Fe10 박막 및 Co90Fe10/SiO2 다층박막의 고주파 자기특성', '한국자기학회지, 8권, 5호, pp.1-300-307,1998.10');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '수평및 수직 윤곽선을 개선한 적응주사선 보간 알고리듬및 구현', '한국전기전자학회, 2권, 2호, pp.1-60-68,1998.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '블록기반 압축영상에서의 블럭화 현상제거 알고리듬에관한연구', '호서대학교 대학원, pp.1,1998.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '최적구조를 갖는 2GHz 대역Voltage Controlled Oscillator 설계', '호서대학교 대학원, pp.1,1998.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '고속 DCT Processor 설계에 관한연구', '호서대학교 대학원, pp.1-327-342,1998.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Co90Fe10/SiO2 Multilayer를 이용한 GHz 자성박막 인덕터 설계 및 제작에 관한연구', '한국통신학회 논문지, 25권, 5호, pp.1,2000.05');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'xDSL용 저왜곡 라인 드라이버 설계에 관한연구', '공업기술연구소 논문집, pp.1,2001.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Acoustic Echo Canceller 설계 및 구현', '한국통신학회논문지, pp.1,2004.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Impementation of Acoustic Echo Canceller with FPGA', '한국음향학회지, 23권, 3E호, pp.1-79 84,2004.09');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '5GHz 대역 OFDM 무선 LAN 모뎀 설계 및 FPGA 구현', '한국신호처리.시스템학회 논문지, 5권권, 4호호, pp.1-333 338,2004.10');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '고압전동기 고정자 권선의 절연결함에 대한 특징추출 기법', '전기전자재료학회 논문지, 19권권, 10호호, pp.1-976-983,2006.10');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '고압전동기 고정자 권선의 PRPD 부분방전 결함신호 해석', '전기전자재료학회 논문지, 19권권, 10호호, pp.1-942 - 946,2006.10');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'AMOLED용 Driver IC 설계', '공업기술연구 논문집(제 27집), 27집권, 1호, pp.79-86,2008.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '효율적인 HDL 디버깅을 위한 아키텍쳐 자동생성 시스템', '한국정보통신학회 논문지, 17권, 7호, pp.1653-1659,2013.07');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '고속 연산을 위한 병렬구조의 십진 부동소수점 연산장치 설계', '한국정보통신학회논문지, 17권, 12호, pp.2921-2926,2013.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Dynamic Framed Slotted ALOHA 기반 RFID 태그충돌방지 알고리즘 개선', '한국음향학회지, 33권, 2호, pp.126-132,2014.03');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, 'Core-A 플랫폼을 이용한 동기형 전력제어 임베디드 시스템 설계', '한국정보통신학회논문지, 18권, 6호, pp.1413-1421,2014.06');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(1, '선행제로 예측기를 이용한 고속 연산 십진 부동소수점 가산기 설계', '한국정보통신학회논문지, 19권, 2호, pp.407-413,2015.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'A Study on the Built-In Self-Test for AC Parameter Testing of SDRAM using Image Graphic Controller', '한국음향학회 저널 ISSN 1225-4428 VOL.20 NO.1E, 1권, 1호, pp.1-1,2001.01');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, '고속 움직임 예측기 설계 및 구현', '한국통신학회 논문집, 27권, 1호, pp.1,2002.01');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'A Desing and Implementation of Wireless Sensor Gateway for Efrficient Querying and Managing through Worde Web', 'IEEE Transactions Consumer Electronics, 49권, 4호, pp.1-1090-1097,2003.11');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'TeleRemote를 이용한 원격 제어 시스템 구현', '한국통신학회논문지, 28권, 12B호, pp.1-1115-1124,2003.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, '직렬 ATA 용 8b/10b 인코더와 디코더 설계 및 구현', '한국통신학회논문지, 29권, 1호, pp.1-93-99,2004.01');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, '15Gbps 직렬 에이디에이 전송 칩 구현', '대한전자공학회지, 41권, 7호, pp.1-63-70,2004.07');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'An Aggregate Flow Marker for Improving TCP Fairness in Multiple Domain DiffServ Networks', 'Springer LNCS3266, pp.1-114-123,2004.09');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'Simulation and Analysis of Radio-Frequency Single-Eletctron Transister (RF-SET) by SPICE', 'Journal of the Korean Physical Society, 47권, 93호, pp.1-543-546,2005.11');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'Privacy 속성 기반의 오인된 메일 복구 알고리즘 개발', '전기전자학회논문지, 9권, 2호, pp.1-108-114,2005.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'Fit-FA Finder를 이용한 SMBC 플랫폼 설계', '전지전자학회논문지, 10권, 1호, pp.1-49-54,2006.03');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'Development and characteristics of solenoid-type SMD RF chip inductors', 'CURRENT APPLIED PHYSICS, 10권, 3호, pp.962-966,2010.05');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'RF 마그네트론 스퍼터링으로 증착된 Al이 도핑된 ZnO(AZO) 박막의 특성에 대한 연구', '전자공학회논문지, 47권, 7호, pp.8-16,2010.07');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, 'TP 계수를 이용한 적응적 실시간 트래픽 할당 스케듈러의 성능 향상에 관한 연구', '인터넷정보학회논문지, 11권, 4호, pp.1-10,2010.08');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(2, '음성합성용 저전력 고음질 부호기/복호기 설계및 구현', '한국인터넷방송통신학회논문지, 13권, 6호, pp.55-61,2013.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(3, '도심 무선채널의 실측데이터를 이용한 적응 섹터셀 시스템의 성능 분석', '신호처리.시스템학회 논문지, pp.1-7,2008.01');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(3, '수중음향 통신망에서 IEEE 802.11 DCF MAC 성능분석', '선박해양기술, 45권, 1호, pp.25-33,2008.05');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(3, '이동통신용 적응 섹터 셀 시스템의 성능분석', '호서대학교공업기술연구소, 28권, 1호, pp.13-19,2009.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(3, '수중채널 환경에서 센서 간의 간격에 의한 수신 신호의 상관 특성 분석', '한국음향학회지, 31권, 2호, pp.107-113,2012.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(3, '수중 채널 환경에서 측정데이터를 이용한 빔형성기가 결합된 다이버서티의 상관계수 분석', '한국통신학회논문지, 37A권, 12호, pp.1023-1030,2012.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(3, '이동통신 중계기용 스마트 안테나 구조 설계', '한국신호처리시스템학회 논문지, 14권, 2호, pp.110-116,2013.04');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, 'IEEE 80211b 무선 랜에서 저 전력 스테이션을 위한 전송 제어 기법', '인터넷정보학회논문지, 9권, 2호, pp.1-8,2008.04');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, '중첩된 무선 랜에서 점유된 채널의 회피 기법', '인터넷정보학회논문지, 10권, 1호, pp.1-33-41,2009.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, 'IEEE 802.15.4 네트워크에서 WiFi 네트워크의 간섭 탐지 방법', '인터넷정보학회논문지, 14권, 4호, pp.13-24,2013.08');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, 'WiFi 트래픽의 간섭환경에서 IEEE 802.15.4 노드의 프레임 전송 및 채널변경 방법', '인터넷정보학회논문지, 15권, 1호, pp.179-191,2014.02');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, '802.11 네트워크의 충돌기반 성능분석', '한국인터넷방송통신TV학회 논문지, 14권, 2호, pp.93-100,2014.04');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, 'WiFi 트래픽 간섭을 피하기 위한 IEEE 802.15.4 노드의 채널탐색방법', '인터넷정보학회논문지, 15권, 2호, pp.19-31,2014.04');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(4, 'WiFi의 간섭을 평가하기 위한 IEEE 802.15.4 채널분석기의 구현', '전기학회 논문지 P권, 63P권, 2호, pp.81-88,2014.06');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'A novel rate-distortion analysis framework for JPEG coding', 'Picture Coding Symposium 2001, 1권, pp.1-33-36,2001.04');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'A novel linear source model and a unified rate control algorithm for H263 / MPEG-2 / MPEG-4', 'IEEE Int'||CHR(39)||'l Conference on ASSP, 3권, pp.1-1777-1780,2001.05');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'p-domain source modeling and rate control for video coding and transmission', 'IEEE Int'||CHR(39)||'l Conference on ASSP, 3권, pp.1-1773-1776,2001.05');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'Object-level bit allocation and scalable rate control for MPEG-4 video coding', 'IEEE Workshop and Exhibition on MPEG-4 , 1권, 1호, pp.1-63-66,2001.06');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'Low-delay rate control for DCT video coding via p-domain source modeling', 'Trans. on Circuits and Systems for video, vol. 11권, no. 8호, pp.1-928-940,2001.08');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'Multiple reference frame based scalable video coding for low-delay Internet transmission', 'Proc. International Workshop on VLBV01, pp.1,2001.10');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'Adaptive Multiple Reference Frame Based Scalable Video Coding Algorithm', 'Proc. IEEE ICIP 2003, 2권, pp.1,2002.09');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, '적응 다중참조 이동보상을 이용한 에러에 강인한 스케일러블 동영상 전송기법', '한국통신학회논문지, pp.1,2004.03');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, '반도체 패키지의 2차원 비전 검사 알고리즘에 관한 연구', '한국통신학회논문지, 31권, 12호, pp.1-8,2006.12');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, '모폴로지(Morphology)를 이용한 TFT-LCD 셀 검사 알고리즘 연구', '한국조명전기설비학회논문지, 21권, 1호, pp.1-9,2007.01');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'H264/AVC 고속 매크로블록 모드 결정 알고리즘', '전자공학회논문지, 44권, 4호, pp.1-9,2007.07');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, '부호화 효율을 고려한 고속 인터/인트라 모드 결정 알고리즘', '한국통신학회논문지, 33권, 8호, pp.1-9,2007.08');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'H.264/AVC 고속의 효율적인 매크로블록 모드 결정 알고리즘', '전자공학회논문지, 48권, 3호, pp.42-49,2011.05');
+insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(9, 'Impact of self-phase modulation on Instabilities in fiber lasers', 'IEEE JOURNAL OF QUANTUM ELECTRONICS, 46권, 12호, pp.1732-1859,2010.12');
+
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'A Study on ADSL Transmission of DMT based on the Subscriber Line', '음성통신및 신호처리 학술대회,2000.08');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Embedded System을 위한 Windows-CE의 Porting', '대한전자공학회 호서지부 추계학술발표회,2000.10');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'vhdl를 이용한 저 전력 구조 ALU 및 고속 MULTIPLIER설계', '2001년도 한국음향학회 학술발표대회,2001.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, '디지탈 IF 수신기를 위한 Decimation Filter의 저전력 설계에 관한연구', '2001년도 한국음향학회 학술발표대회,2001.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'IF 디지탈 주파수 하향 컨버터를 위한 저전력 multirate 구조', '한국통신학회 추계종합학술발표,2001.11');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'VHDL을 이용한 음향반향제거기 설계 및 구현', '한국통신학회 추계종합학술발표대회,2001.11');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Design and Implementation of an Acoustic Echo Canceller', '2002 IEEE Asia_Pacific Conference on ASIC Proceeding,2002.08');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'TMS320C6711을 이용한 Acoustic Echo Canceller 구현', '제15회 신호처리 합동 학술대회,2002.09');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'NSC을 이용한 2-D DWT 구조 실현에 관한연구', '2003년도 하계학술발표대회 논문집,2003.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, '영상신호처리 기법을 이용한 고압전동기 결함신호 분류', '2006년도 한국전기전자학회 춘계학술대회,2006.05');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'NSE을 적용한 Line-based 2-D DWT의 구조 설계 및 실현', '한국통신학회 2006년도 하계학술발표회,2006.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Lifting-Based 2-D DWT의 설계 및 VLSI 구조', '제23회 음성 통신 및 신호처리 학술대회(한국음향학회),2006.08');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'PIFA를 이용한 DMB 내장형 모듈 과 안테나 설계에 관한 연구', '제24회 음성통신및 신호처리 학술대회,2007.08');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Split - Radix 알고리듬을 이용한 MIMO - OFDM 설계', '2009년도 춘계학술발표대회,2009.05');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Orpian을 이용한 임베디드 시스템 플렛폼 설계 ----ADPCM 설계 응용', '2009년도 한국통신학회 추계종합학술발표회,2009.11');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Split - Radix 알고리듬을 이용한 MIMO - OFDM용 FFT/IFFT 설계', '2010년도 동계종합학술발표회,2010.02');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Orpian을 이용한 임베디드 시스템 플렛폼 설계 ---CIS Controller 설계 응용', '2010년도 동계종합학술발표회,2010.02');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, '비젼 임베디드 시스템의 하드웨어 설계 및 구현', '제27회 음성통신및 신호처리 학술대회,2010.08');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Engineering-SaaS CAD System for Embedded System Design', 'IP - SOC 2010,2010.12');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Web - Based IP Reuse CAD System, Flowrian', 'FGIT 2010 Conference ---- Signal and Image Processing,2010.12');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'VIsion Embedded System을 적용한 절전 스위칭 회로 설계', '제28회 음성통신 및 신호처리 학술대회,2011.08');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'FPGA Impleementation of Energy Saving Embedded System with Multiple Vision Sensors', 'APCC 2011,2011.10');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Design of Embedded Platform with AVR', '9th International Conference on Computing Technology and Information Management,2013.06');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'Performance analysis of IEEE 802.11 based MAC for underwater acoustic networks', '2008 by The International Society of Offshore and Polar Engineers,2008.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'Design of a new MAC protocol for underwater acoustic network', '2008 by The International Society of Offshore and Polar Engineers,2008.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'The performance Analysis of Diversity Technologies for Underwater Channel Environments Using the Experimental Data', 'Oceans 2009 MTS/IEEE Biloxi,2009.10');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'The performance Analysis of Diversity Tecjnologies for Underwater Moving Channel Environments Using the Experimental Data', 'Proceeding of Oceans'||CHR(39)||'10,2010.05');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, '수중 통신에서의 프레임 구조 연구', '2010년도 한국통신학회 하계 학술발표회,2010.06');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, '실측데이터를 이용한 수중 벡터 채널 특성연구', '2010년도 한국통신학회 하계학술 발표대회,2010.06');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'Performance Analysis of Smart Antenna System for Mobile Terminals', 'TENCON 2010,2010.11');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, '수중 MIMO-Beamforming용 Simulator에 관한연구', '2011년도 한국통신학회 하계종합학술발표회,2011.06');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'The Performace Analysis of Diversity Combined with Beamforming Technologies for Underwater Channel Environments Using Experimental Data', 'OCEANS 2011,2011.09');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'The Smart Antenna Module for RF Repeater', 'Asia-Pacific Conference on Communications,2011.10');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(3, 'Smart Antenna System for VANET(Vehicular Ad-hoc Networking Communications)', '2011 ISAP,2011.10');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, 'Error-resilient video coding using adaptive weighted multiple reference frame method', 'SPIE Visual Communications and Image Processing '||CHR(39)||'04,2004.01');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, 'H264 표준영상 압축과 RTP/IP 프로토콜을 이용한 에러에 강인한 영상전송', '2004년도 대한전자공학회 충북지부-재한전기학회 충북지회 합동학술대회 및 충북 IT 산업발전전략 심포지움,2004.11');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, 'BGA 형태 반도체 패키지의 2차운 자동 비전 검사 구현에 관한 연구', '2005년도 하계종합학술발표회,2005.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, '모폴로지(Morphology)를 이용한 FPD 셀 결함 검사 알고리즘 구현', '제18회 신호처리합동학술대회,2005.10');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, '고정밀 아날로그 신호처리를 위한 고속 DSP 시스템 구현', '2006년도 제 19회 신호처리합동학술대회,2006.09');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, 'H264/AVC 최적화를 위한 효율적인 고속 매크로블록 모드 결정 알고리즘', '2006년도 대한전자공학회 추계종합학술대회,2006.11');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(5, '고속 인터 모드 결정을 위한 알고리즘', '신호처리합동학술대회,2009.09');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(9, 'Optical true time-delay beam-forming for phased array antenna using a dispersion compensationg fiber and a multi-wavelength laser', 'CANEUS FLY-BY-WIRELESS WORKSHOP 2011,2011.06');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(9, 'Optical True Time-delay for Phased array Antenna System Using Dispersion Compensating Module and a Multiwavelength Fiber Laser', 'THe 17th OptiElectronics and Communications Conference,2012.07');
+insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(9, 'Optical time-delay for phased-array antenna sytem using dispersion compensationg module and multi-wavelength fiber laser', 'OECC2012,2012.07');
+
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'VLSI 설계입문', to_date('1998.04.20','yyyy.mm.dd'), '영한출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, '신호 및 시스템', to_date('2000.02.25','yyyy.mm.dd'), '도서출판 한샘');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, '디지탈 시스템', to_date('2002.08.20','yyyy.mm.dd'), '도서출판 한산');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'SoC 설계를 위한 VHDL 설계 및 응용', to_date('2004.02.20','yyyy.mm.dd'), '한산출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'VHDL 기초 및 응용 설계실습', to_date('2005.02.15','yyyy.mm.dd'), '한산(출)');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'SoC 설계 기초 및 응용', to_date('2005.02.28','yyyy.mm.dd'), '한산(출)');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'Scenian을 이용한 System C 설계 및 검증 실험', to_date('2007.09.10','yyyy.mm.dd'), '브레인코리아');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'Flowrian을 이용한 VHDL 기초 설계 및 검증 실험', to_date('2008.10.01','yyyy.mm.dd'), '브레인코리아');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'Flowrian을 이용한 반도체 IP 재사용 설계 및 검증 실험', to_date('2008.10.01','yyyy.mm.dd'), '브레인코리아');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'Orpian을 이용한 Verilog 기초 설계 및 검증실험', to_date('2009.05.31','yyyy.mm.dd'), '브에인코리아');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'Flowrian II를 이용한 임베디드 시스템 설계 실습', to_date('2010.04.30','yyyy.mm.dd'), '도서출판 드림북');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, 'Verilog 디지털 논리회로 설계 실험', to_date('2010.07.10','yyyy.mm.dd'), '도서출판 한산');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(1, '전자회로', to_date('2011.08.30','yyyy.mm.dd'), '도서출판 한산');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, '이론과 실습을 겸한 VHDL Chip Design', to_date('2001.02.28','yyyy.mm.dd'), '한성출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, '알고 보면 재미있는 전자회로', to_date('2001.09.10','yyyy.mm.dd'), '한국맥그로힐(주)');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, 'PC와 정보기술', to_date('2003.06.20','yyyy.mm.dd'), '-');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, '디지털 논리와 VHDL을 이용한 회로설계', to_date('2003.07.10','yyyy.mm.dd'), '홍릉과학출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, '이론과 실습을 겸한 VHDL & Verilog Chip Design', to_date('2004.02.20','yyyy.mm.dd'), '한성출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, 'C 언어 프로그래밍', to_date('2004.02.25','yyyy.mm.dd'), '한성출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(2, 'TMS320C6711 DSP 실험실습', to_date('2005.02.28','yyyy.mm.dd'), '한성출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(3, '모바일 통신 시스템', to_date('2011.10.10','yyyy.mm.dd'), '충청권NewIT선도인재양성센터');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(4, '디지털 논리와 VHDL을 이용한 회로설계', to_date('2003.06.25','yyyy.mm.dd'), '홍릉과학출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(4, 'TMS320C6711 DSP 실험실습', to_date('2005.02.28','yyyy.mm.dd'), '한성출판사');
+insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(4, '무선통신실습을 위한 AVR 마이컴 활용', to_date('2011.03.31','yyyy.mm.dd'), 'NewIT 인재양성센터');
+
+insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(9, '분산보상 광섬유 및 가변 다중 파장 레이저를 이용한 위상배열 안테나', to_date('2011.06.03','yyyy.mm.dd'), '특허청', '1012365980000');
+insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(3, '수중 음향 통신 시스템 및 통신 방법', to_date('2010.08.30','yyyy.mm.dd'), '한국해양연구원', '10-0980091');
+insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(5, '모폴로지 기법을 이용한 티에프디 엘시디 결함 검출 및분류방법', to_date('2006.12.18','yyyy.mm.dd'), '호서대학교', '10-0661013/10-2005-0054525');
+insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(5, '매크로블록의 부호화 모드 고속 결정 방법', to_date('2007.12.26','yyyy.mm.dd'), '호서대학교 산학협력단', '2007-0137651/10-0943636');
+
+
+
 
 insert into board values(1, 'title', 'article', 'writer', sysdate, '255.255.255.255', '12341234', 'email@email.com', 0, 0, 0, 1);
 
