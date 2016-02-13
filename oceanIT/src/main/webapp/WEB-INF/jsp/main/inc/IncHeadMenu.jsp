@@ -13,7 +13,7 @@
 		<li><a href="/controller/Curriculum.do?no=3">교과과정</a></li>
 		<li><a
 			href="http://www.hoseo.ac.kr/CmsHome/administration_03_01.eznic">학사정보</a></li>
-		<li><a href="/controller/Community.do?no=5">학과커뮤니티</a></li>
+		<li><a href="/controller/Community.do?no=5&boardPage=1">학과커뮤니티</a></li>
 		<li><a href="/controller/Board.do?no=6">게시판</a></li>
 		<li><a href="http://ipsi.hoseo.ac.kr/CmsHome/MainDefault.eznic">입학안내</a></li>
 	</ul>

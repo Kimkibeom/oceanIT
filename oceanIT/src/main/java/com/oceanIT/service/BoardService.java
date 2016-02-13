@@ -31,4 +31,12 @@ public class BoardService {
 		return bdao.selectBoardByBoardNo(boardNo);
 
 	}
+
+	public int selectBoardCnt(int kindNo) {
+		return bdao.selectBoardCnt(kindNo);
+	}
+
+	public List<BoardVO> selectBoardListByPage(int boardPage, int BOARD_PER_PAGE, int no) {
+		return bdao.selectBoardListByPage(boardPage, BOARD_PER_PAGE, no);
+	}
 }
