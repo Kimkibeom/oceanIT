@@ -55,12 +55,27 @@
 										href="/controller/CommunityView.do?boardNo=${bd.boardNo }"><c:out
 												value="${bd.title}"></c:out></a></td>
 									<td id="reg_date" nowrap="nowrap"><c:out
-											value="${bd.regDate}"></c:out></td>
+											value="${bd.strDate}"></c:out></td>
 									<td nowrap="nowrap"><c:out value="${bd.writer}"></c:out></td>
 									<td nowrap="nowrap"><c:out value="${bd.readCnt}"></c:out></td>
 							</c:forEach>
 						</tbody>
 					</table>
+				</div>
+				<div style="text-align: center;">
+					<!-- paging -->
+					&lt
+					<c:forEach begin="${startPage }" end="${endPage }" var="pageindex">
+						<c:choose>
+							<c:when test="${boardPage }=${pageindex }">
+								<div>${pageindex }</div>
+							</c:when>
+							<c:otherwise>
+								<a href="/controller/Community.do?no=5&boardPage=${pageindex }">${pageindex }</a>
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
+					&gt
 				</div>
 			</div>
 		</div>

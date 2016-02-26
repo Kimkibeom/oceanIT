@@ -38,6 +38,78 @@ drop table kind_of_board;
 	"NAME" VARCHAR2(20 BYTE), 
 	"PASSWORD" VARCHAR2(20 BYTE)
    ) ;
+   
+--------------------------------------------------------
+--  DDL for Table PROFESSOR
+--------------------------------------------------------
+
+create table "PROFESSOR"(
+professor_no number(10,0) primary key,
+professor_name varchar2(20 byte),
+professor_phone varchar2(20),
+professor_email varchar2(30),
+professor_eng_name varchar2(20 byte));
+
+--------------------------------------------------------
+--  DDL for Table GRADUATE
+--------------------------------------------------------
+
+create table "GRADUATE"(
+professor_no number(10,0) primary key,
+college_graduate_school_name varchar2(20),
+master_graduate_school_name varchar2(30),
+doctor_graduate_school_name varchar2(30),
+college_graduate_major_name varchar2(20),
+master_graduate_major_name varchar2(20),
+doctor_graduate_major_name varchar2(20),
+college_graduate_name varchar2(20),
+master_graduate_name varchar2(20),
+doctor_graduate_name varchar2(20),
+constraint fk_graduate_professor_no foreign key(professor_no) references professor(professor_no));
+
+--------------------------------------------------------
+--  DDL for Table THESIS
+--------------------------------------------------------
+
+create table "THESIS"(
+professor_no number(10,0) not null,
+thesis_name varchar2(100) not null,
+thesis_desc varchar2(200) not null,
+constraint fk_thesis_professor_no foreign key(professor_no) references professor(professor_no));
+
+--------------------------------------------------------
+--  DDL for Table PRESENTATION
+--------------------------------------------------------
+
+create table "PRESENTATION"(
+professor_no number(10,0) not null,
+presentation_name varchar2(100) not null,
+presentation_desc varchar2(200) not null,
+constraint fk_presentation_professor_no foreign key(professor_no) references professor(professor_no));
+
+--------------------------------------------------------
+--  DDL for Table WRITING
+--------------------------------------------------------
+
+create table "WRITING"(
+professor_no number(10,0) not null,
+writing_name varchar2(50) not null,
+writing_date DATE not null,
+writing_publisher_name varchar2(50) not null,
+constraint fk_writing_professor_no foreign key(professor_no) references professor(professor_no));
+
+--------------------------------------------------------
+--  DDL for Table PATENT
+--------------------------------------------------------
+
+create table "PATENT"(
+professor_no number(10,0) not null,
+patent_name varchar2(50) not null,
+patent_register_date DATE not null,
+patent_register_organization varchar2(30) not null,
+patent_register_number varchar2(30) not null,
+constraint fk_patent_professor_no foreign key(professor_no) references professor(professor_no));
+
 --------------------------------------------------------
 --  DDL for Table REPLY
 --------------------------------------------------------
@@ -103,6 +175,11 @@ drop sequence reply_seq;
 create sequence board_seq start with 1 increment by 1 maxvalue 10000 nocache nocycle;
 create sequence kind_of_board_seq start with 1 increment by 1 maxvalue 10000 nocache nocycle;
 create sequence reply_seq start with 1 increment by 1 maxvalue 10000 nocache nocycle;
+
+create sequence professor_seq start with 1 increment by 1 nominvalue nomaxvalue nocache nocycle;
+
+drop sequence professor_seq;
+commit;
 
     
     

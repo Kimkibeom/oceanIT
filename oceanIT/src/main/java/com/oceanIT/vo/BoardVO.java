@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BoardVO {
-	SimpleDateFormat fmt = new SimpleDateFormat("yyyy. MM. dd HH:MM:SS");
+	SimpleDateFormat fmt = new SimpleDateFormat("yyyy. MM. dd (HH:MM:SS)");
 	private int boardNo;
 	private String title;
 	private String article;

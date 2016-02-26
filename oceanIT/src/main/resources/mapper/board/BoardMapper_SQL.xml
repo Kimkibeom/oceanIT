@@ -25,4 +25,26 @@
 		from board
 		where (title like '%' || #{boardTitleContent} || '%' OR article like '%' || #{boardTitleContent} || '%')
 	</select>
+	
+	<select id="selectBoardByPage" parameterType="hashmap"
+		resultType="com.oceanIT.vo.BoardVO">
+		SELECT *
+		  FROM (
+		  		SELECT sub.*, ROWNUM AS RNUM
+		          FROM ( 
+		          		select *
+		                   from board 
+		                   where kind_no = #{kindNo}
+		                   order by board_no desc
+		                ) sub
+		       )
+		 WHERE RNUM BETWEEN #{FROM} AND #{TO}
+	</select>
+	
+	<select id="selectBoardCnt" resultType="int">
+		select count(*)
+		from board
+		where kind_no = #{kindNo}
+	</select>
+	
 </mapper>

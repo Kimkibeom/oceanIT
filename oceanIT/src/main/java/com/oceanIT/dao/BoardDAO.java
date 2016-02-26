@@ -1,5 +1,6 @@
 package com.oceanIT.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +31,7 @@ public class BoardDAO {
 
 	public BoardVO selectBoardByBoardNo(int boardNo) {
 		String stmt = nameSpace + "selectBoardByBoardNo";
-//		log.info("BoardList DAO board : " );
+		// log.info("BoardList DAO board : " );
 		return sqlSession.selectOne(stmt, boardNo);
 	}
 	
@@ -42,5 +43,20 @@ public class BoardDAO {
 	public List<BoardVO> selectBoardByBoardTitleContent(String boardTitleContent) {
 		String stmt = nameSpace + "selectBoardByBoardTitleContent";
 		return sqlSession.selectList(stmt, boardTitleContent);
+	}
+
+	public int selectBoardCnt(int kindNo) {
+		String stmt = nameSpace + "selectBoardCnt";
+
+		return sqlSession.selectOne(stmt, kindNo);
+	}
+
+	public List<BoardVO> selectBoardListByPage(int boardPage, int BOARD_PER_PAGE, int no) {
+		String stmt = nameSpace + "selectBoardByPage";
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("FROM", (BOARD_PER_PAGE * (boardPage - 1)) + 1);
+		map.put("TO", (BOARD_PER_PAGE * boardPage));
+		map.put("kindNo", no);
+		return sqlSession.selectList(stmt, map);
 	}
 }
