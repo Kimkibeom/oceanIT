@@ -33,5 +33,14 @@ public class BoardDAO {
 //		log.info("BoardList DAO board : " );
 		return sqlSession.selectOne(stmt, boardNo);
 	}
-
+	
+	public List<BoardVO> selectBoardByBoardTitle(String boardTitle) {
+		String stmt = nameSpace + "selectBoardByBoardTitle";
+		return sqlSession.selectList(stmt, boardTitle);
+	}
+	
+	public List<BoardVO> selectBoardByBoardTitleContent(String boardTitleContent) {
+		String stmt = nameSpace + "selectBoardByBoardTitleContent";
+		return sqlSession.selectList(stmt, boardTitleContent);
+	}
 }

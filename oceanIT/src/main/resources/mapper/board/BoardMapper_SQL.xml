@@ -14,4 +14,15 @@
 		where board_no=#{boardNo}
 	</select>
 
+	<select id="selectBoardByBoardTitle" parameterType="String" resultType="com.oceanIT.vo.BoardVO">
+		select *
+		from board
+		where title like '%' || #{boardTitle} || '%'
+	</select>
+	
+	<select id="selectBoardByBoardTitleContent" parameterType="String" resultType="com.oceanIT.vo.BoardVO">
+		select *
+		from board
+		where (title like '%' || #{boardTitleContent} || '%' OR article like '%' || #{boardTitleContent} || '%')
+	</select>
 </mapper>

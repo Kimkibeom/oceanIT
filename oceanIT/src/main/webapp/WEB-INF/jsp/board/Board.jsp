@@ -17,7 +17,6 @@
 	type="text/css">
 </head>
 <body>
-
 	<%
 		List<BoardVO> list = (List<BoardVO>) request.getAttribute("BoardList");
 	%>
@@ -67,12 +66,14 @@
 				<div id="Page_Select" align="center">
 					<table>
 						<tr>
-							<select id="Select_Name">
-								<option value="Name"> 제목 </option>
-								<option value="Name_Content" > 제목+내용 </option>
+						<form action="/controller/nameSelectBoardList.do">
+							<select name="Select_Name">
+								<option value="Board_Title"> 제목 </option>
+								<option value="Title_Content" > 제목+내용 </option>
 							</select>
-							&nbsp;<input type="text" size="30">
-							&nbsp;<input type="button" value="확인">
+							&nbsp;<input type="text" name="Title"size="30">
+							&nbsp;<input type="submit" value="확인">
+						</form>
 						</tr>
 					</table>
 				</div>

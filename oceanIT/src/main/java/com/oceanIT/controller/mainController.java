@@ -25,8 +25,6 @@ public class mainController {
 	@RequestMapping(value="/mainBoardList.do")
 	public String getMainHeadMenu(ModelMap model) throws Exception{
 		//headmenu boardname 목록 가져와서 뿌림
-
-		
 		return "/main/inc/IncHeadMenu";
 	}
 }
