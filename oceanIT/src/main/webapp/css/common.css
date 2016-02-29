@@ -10,7 +10,7 @@ textarea{overflow:auto;}
 legend {position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;} /* For Screen Reader */
 caption{display:none;}
 img{border:0; vertical-align: middle;}
-/* html, body{margin:0; padding:0; height: 100%;width: 100%;} */
+html{margin:0; padding:0; height: 100%;width: 100%;} 
 body, input, button, select, input, textarea, td, th {
     color: #666666;
     font: 12px Dotum,Gulim,Tahoma,Sans-serif;
@@ -126,10 +126,10 @@ background-position: left center;padding-left:10px;padding-top:2px;letter-spacin
 #topnavi li{display:inline;font-size:13px;color:#727272;font-weight:bold;padding-right:10px;padding-left:10px;}
 #topnavi a{color:#a7ccff;}
 #topnavi a:hover{color:#ffffff;}
-#container{float:left;width:1100px; margin-top:0px;min-height:440px; height:auto !important; height:440px;}
-#leftmenu{float:left;width:200px;min-height:440px; height:auto !important; height:100%; }
-#content{float:left;/* min-height:441px; height:auto !important; height:441px; */padding-left:15px;padding-bottom:10px; border-left:1px solid #dddddd; width:600px; }
-#footer{clear:both;border-top:2px solid #dddddd; z-index:1;}
+#container{float:left;width:1100px; margin-top:0px;min-height:530px; height:auto !important; height:500px;}
+#leftmenu{float:left;width:200px;min-height:786.75px; height:auto !important; height:100%;border-right:1px solid #dddddd; }
+#content{float:left;/* min-height:441px; height:auto !important; height:441px; */padding-left:15px;padding-bottom:10px;  /* border-left:1px #dddddd; */  width:600px; }
+#footer{clear:both; z-index:1;}
 #mopaslogo{float:left;padding-left:10px;}
 #copyright{float:left;font-size:90%;padding-top:20px;padding-left:20px; letter-spacing: -1px;}
 

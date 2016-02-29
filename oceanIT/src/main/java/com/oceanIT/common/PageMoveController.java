@@ -38,6 +38,7 @@ public class PageMoveController {
 	public String moveToPage(@RequestParam("link") String linkPage, HttpSession session){
 		
 		String link = linkPage;
+		System.out.println(link);
 		ModelAndView mv = null;
 		
 		if(link == null || link.equals("")){

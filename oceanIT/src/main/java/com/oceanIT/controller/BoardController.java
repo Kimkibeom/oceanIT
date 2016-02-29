@@ -121,8 +121,9 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/Board.do")
-	public String gotoBoard(ModelMap model) throws Exception {
+	public String gotoBoard(ModelMap model, @RequestParam("no") String no, HttpServletRequest request) throws Exception {
 		model.addAttribute("BoardList", bservice.selectBoardList());
+		request.getSession().setAttribute("no", no);
 		return "/board/Board";
 	}
 	
