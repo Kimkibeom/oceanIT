@@ -33,7 +33,7 @@
     			</c:when>
     			<c:otherwise>
     				<ul>
-    					<li><a href="#">${kind_of_boardVO.name }</a></li>
+    					<li><a href="/controller/sendFromLeft.do?no=${kind_of_boardVO.kind_no}">${kind_of_boardVO.name }</a></li>
     				</ul>
     			</c:otherwise>
     			</c:choose>

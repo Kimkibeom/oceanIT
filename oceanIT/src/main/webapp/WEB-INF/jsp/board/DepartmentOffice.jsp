@@ -27,6 +27,9 @@
 		</div>
 		<!-- header 끝 -->
 		<div style="padding: 10px;" class="container">
+			<div id="leftmenu">
+				<c:import url="/LeftMenu.do?boardno=${sessionScope.no }" />
+			</div>
 			<h2>학과소개</h2>
 			<hr>
 			<div>

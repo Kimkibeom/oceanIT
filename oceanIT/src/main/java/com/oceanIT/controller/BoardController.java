@@ -49,17 +49,20 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/DepartmentFuture.do")
-	public String gotoDeptFuture() throws Exception {
+	public String gotoDeptFuture(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
+		request.getSession().setAttribute("no", no);
 		return "/board/DepartmentFuture";
 	}
 
 	@RequestMapping(value = "/DepartmentOffice.do")
-	public String gotoDeptOffice() throws Exception {
+	public String gotoDeptOffice(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
+		request.getSession().setAttribute("no", no);
 		return "/board/DepartmentOffice";
 	}
 
 	@RequestMapping(value = "/DepartmentIntro.do")
-	public String gotoDeptIntro2() throws Exception {
+	public String gotoDeptIntro2(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
+		request.getSession().setAttribute("no", no);
 		return "/board/DepartmentIntro";
 	}
 
@@ -124,7 +127,7 @@ public class BoardController {
 	public String gotoBoard(ModelMap model, HttpServletRequest request, @RequestParam("no") String no,
 			@RequestParam("boardPage") int boardPage) throws Exception {
 		request.getSession().setAttribute("no", no);
-		
+
 		int boardCnt = bservice.selectBoardCnt(Integer.parseInt(no));
 		int startPage = 1, endPage = (boardCnt / BOARD_PER_PAGE) + 1;
 		model.addAttribute("lastPage", endPage - 1);
@@ -136,7 +139,7 @@ public class BoardController {
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);
 		model.addAttribute("boardPage", boardPage);
-		
+
 		model.addAttribute("BoardList",
 				bservice.selectBoardListByPage(boardPage, BOARD_PER_PAGE, Integer.parseInt(no)));
 		return "/board/Board";
@@ -172,13 +175,43 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/sendFromLeft.do")
-	public String leftMenuSent(ModelMap model, @RequestParam("no") String no)
-			throws Exception {
-		switch(Integer.parseInt(no)){
-		case 1:
+	public String leftMenuSent(ModelMap model, @RequestParam("no") String no) throws Exception {
+		switch (Integer.parseInt(no)) {
+		case 8:// 학과장 인사말
+			return "redirect:/DepartmentBoard.do?no=1";
+		case 9:// 학과소개
+			return "redirect:/DepartmentIntro.do?no=1";
+		case 10:// 학과사무실소개
+			return "redirect:/DepartmentOffice.do?no=1";
+		case 11:// 진로자격중
+			return "redirect:/DepartmentFuture.do?no=1";
+		case 12:// 교수진
+			return "redirect:/ProfessorIntro.do?no=2";
+		case 13:// 교과과정표
+			return "redirect:/Curriculum.do?no=3";
+		case 14:// 학사안내
+			return "redirect:http://www.hoseo.ac.kr/CmsHome/administration_03_01.eznic";
+		case 15:// 장학안내
+			return "redirect:http://www.hoseo.ac.kr/CmsHome/administration_05_01.eznic";
+		case 16:// 졸업안내
+			return "redirect:http://www.hoseo.ac.kr/CmsHome/administration_04_05.eznic";
+		case 17:// 학사일정
+			return "redirect:http://www.hoseo.ac.kr/CmsHome/administration_01.eznic";
+		case 18:// 학생회
+			break;
+		case 19:// 자유게시판
+			return "redirect:/Community.do?no=5&boardPage=1";
+		case 20:// 공지사항
+			return "redirect:/Board.do?no=6&boardPage=1";
+		case 21:// 포토게시판
+			break;
+		case 22:// 자료실
+			break;
+		case 23:// q&a
+			break;
 		}
-		
+
 		return "/board/Board";
 	}
-	
+
 }
