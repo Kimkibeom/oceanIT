@@ -23,13 +23,19 @@ public class BoardService {
 	private BoardDAO bdao;
 
 	public List<BoardVO> selectBoardList() {
-
 		return bdao.selectBoardList();
 	}
 
 	public BoardVO selectBoardByBoardNo(int boardNo) {
 		return bdao.selectBoardByBoardNo(boardNo);
-
+	}
+	
+	public List<BoardVO> selectBoardByBoardTitle(String boardTitle) {
+		return bdao.selectBoardByBoardTitle(boardTitle);
+	}
+	
+	public List<BoardVO> selectBoardByBoardTitleContent(String boardTitleContent) {
+		return bdao.selectBoardByBoardTitleContent(boardTitleContent);
 	}
 
 	public int selectBoardCnt(int kindNo) {

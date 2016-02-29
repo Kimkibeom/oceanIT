@@ -6,9 +6,12 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
+import org.apache.commons.logging.Log;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
+import org.junit.runner.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -122,14 +125,32 @@ public class BoardController {
 		model.addAttribute("BoardList", bservice.selectBoardList());
 		return "/board/Board";
 	}
+	
+	@RequestMapping(value="/nameSelectBoardList.do")
+	public String checkSelectBoard(ModelMap model, @RequestParam("Select_Name") String select) throws Exception {
+		if(select.equals("Board_Title")) 
+			return "forward:/SelectTitleBoardList.do";
+		else
+			return "forward:/SelectTitleContentBoardList.do";
+	}
+	
+	@RequestMapping(value="/SelectTitleBoardList.do")
+	public String getSelectTitleBoard(ModelMap model, @RequestParam("Title") String boardTitle) throws Exception {
+		model.addAttribute("BoardList", bservice.selectBoardByBoardTitle(boardTitle));
+		return "/board/Board";
+	}
+	
+	@RequestMapping(value="/SelectTitleContentBoardList.do")
+	public String getSelectTitleContentBoard(ModelMap model, @RequestParam("Title") String boardTitleContent) throws Exception {
+		model.addAttribute("BoardList", bservice.selectBoardByBoardTitleContent(boardTitleContent));
+		return "/board/Board";
+	}
 
 	@RequestMapping(value = "/PostReply.do", method = RequestMethod.POST)
 	public String postReply(ModelMap model, int boardNo, String comnentwriter, String commentpass, String comment)
 			throws Exception {
 		model.addAttribute("board", bservice.selectBoardByBoardNo(boardNo));
-
 		log.info("comment : " + comment);
 		return "/board/CommunityView";
 	}
-
 }

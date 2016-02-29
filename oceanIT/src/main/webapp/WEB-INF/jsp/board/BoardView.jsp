@@ -40,6 +40,17 @@
 		<!-- header 끝 -->
 		<div>Board View : ${board }</div>
 		
+		<div class="default_tablestyle">
+			<table>
+				<h2>댓글 </h2>
+				<table cellpadding="0" cellspacing="0">
+					<form action="">
+					<input type="text" size="70" name="comment">
+					&nbsp;<input type="submit" value="확인"></form>
+				</table>
+			</table>
+			
+		</div>
 	</div>
 	<%-- 	list.get :
 	<%=list.get(0).toString()%> --%>
