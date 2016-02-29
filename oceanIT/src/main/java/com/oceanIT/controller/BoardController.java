@@ -27,8 +27,8 @@ public class BoardController {
 	@Autowired
 	BoardService bservice;
 	final int BOARD_PER_PAGE = 10;
-	
-	@Resource(name="professorService")
+
+	@Resource(name = "professorService")
 	private ProfessorServiceImpl professorService;
 
 	private Logger log = Logger.getLogger(this.getClass());
@@ -61,17 +61,19 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/ProfessorIntro.do")
-	public String gotoProfsIntro(HttpServletRequest request, @RequestParam("no") String no, ModelMap model) throws Exception {
+	public String gotoProfsIntro(HttpServletRequest request, @RequestParam("no") String no, ModelMap model)
+			throws Exception {
 		request.getSession().setAttribute("no", no);
 		List<ProfessorVO> list = professorService.getProfessorList();
 		model.addAttribute("ProfessorVO", list);
 		return "/board/ProfessorIntro";
 	}
-	
+
 	@RequestMapping(value = "/selectProfessor.do")
-	public void selectProfessor(@RequestParam Map<String,String> paramMap, ModelMap model, HttpServletResponse response) throws Exception{
+	public void selectProfessor(@RequestParam Map<String, String> paramMap, ModelMap model,
+			HttpServletResponse response) throws Exception {
 		Map<String, Object> map = professorService.selectProfessor(paramMap);
-		
+
 		Gson gson = new Gson();
 		PrintWriter pw = null;
 		response.setContentType("application/json");
@@ -82,8 +84,7 @@ public class BoardController {
 		pw.flush();
 		pw.close();
 	}
-	
-	
+
 	@RequestMapping(value = "/Curriculum.do")
 	public String gotoCurriculum(HttpServletRequest request, @RequestParam("no") String no) throws Exception {
 		request.getSession().setAttribute("no", no);
@@ -94,18 +95,17 @@ public class BoardController {
 	public String gotoCommunity(Model model, HttpServletRequest request, @RequestParam("no") String no,
 			@RequestParam("boardPage") int boardPage) throws Exception {
 		request.getSession().setAttribute("no", no);
-		int startPage = boardPage - 4, endPage = boardPage + 4;
 		int boardCnt = bservice.selectBoardCnt(Integer.parseInt(no));
-		// int boardCnt = bservice.selectBoardCnt(1);
+		int startPage = 1, endPage = (boardCnt / BOARD_PER_PAGE) + 1;
+		model.addAttribute("lastPage", endPage - 1);
+		if (BOARD_PER_PAGE * 9 < boardCnt) {
+			startPage += ((boardPage - 1) / 10) * 10;
+			endPage = startPage + 9;
+		}
 
-		if ((boardCnt / BOARD_PER_PAGE) < endPage) {
-			endPage = boardCnt / BOARD_PER_PAGE;
-		}
-		if (startPage <= 0) {
-			startPage = 1;
-		}
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);
+		model.addAttribute("boardPage", boardPage);
 		model.addAttribute("BoardList",
 				bservice.selectBoardListByPage(boardPage, BOARD_PER_PAGE, Integer.parseInt(no)));
 		return "/board/Community";
