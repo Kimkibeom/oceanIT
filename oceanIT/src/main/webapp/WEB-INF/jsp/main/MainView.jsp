@@ -35,10 +35,9 @@
 	<div id="container">
 		<!-- content 시작 -->
 		<div id="content">
-			test
+		
 		</div>
 		<!-- content 끝 -->
-		<%-- <div><c:import url="/PageLink.do?link=main/inc/IncFootList" /></div> --%>
 	</div>
 	<div id="footer"><c:import url="/PageLink.do?link=main/inc/IncFooter" /></div>
 </div>

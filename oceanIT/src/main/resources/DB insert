@@ -117,43 +117,6 @@ insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'H264/AVC �
 insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, '부호화 효율을 고려한 고속 인터/인트라 모드 결정 알고리즘', '한국통신학회논문지, 33권, 8호, pp.1-9,2007.08');
 insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(5, 'H.264/AVC 고속의 효율적인 매크로블록 모드 결정 알고리즘', '전자공학회논문지, 48권, 3호, pp.42-49,2011.05');
 insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(9, 'Impact of self-phase modulation on Instabilities in fiber lasers', 'IEEE JOURNAL OF QUANTUM ELECTRONICS, 46권, 12호, pp.1732-1859,2010.12');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Solution of time domain PMCHW formulation for transient electromagnetic scattering from arbitrarily shaped 3-D dielectric objects', 'Journal of Electromagnetic Waves and Applications, pp.1,2004.02');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Analysis of transient electromagnetic scattering from dielectric objects using a combined field integral equation','Microwave Opt. Technol. Lett., 40권, 6호, pp.1,2004.03');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Combined field integral equation for the analysis of scattering from three-dimensional conducting bodies coated with a dielectric material','Microwave Opt. Technol. Lett., 40권, 6호, pp.1,2004.03');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Time-domain combined field integral equation using Laguerre polynomials as temporal basis functions','International Journal of Numerical Modelling, 17권, 3호, pp.1,2004.05');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Analysis of scattering from arbitrarily shaped 3-D conducting/dielectric composite objects using a combined field integral equation','J. of Electromag. Waves and Applicat., pp.1,2004.06');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Analysis of transient scattering from conductors using Laguerre polynomials as temporal basis functions','Appl. Computational Electromagn. Soc. (ACES) J., pp.1,2004.07');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Solving the time-domain magnetic field integral equation for dielectric bodies without the time variable through the use of entire domain Laguerre polynomials','Electromagnetics, pp.1,2004.08');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Time domain EFIE and MFIE formulations for analysis of transient electromagnetic scattering from 3-D dielectric objects','J. of Electromag. Waves and Applicat./Progress In Electromagnetics Research, 49권, pp.1-113-142,2004.09');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Transient electromagnetic scattering from dielectric objects using electric field integral equation with Laguerre polynomials as temporal basis functions','pp.1,2004.09');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'A stable solution of time domain electric field integral equation for thin-wire antenna using the Laguerre polynomials','IEEE Trans. Antennas and Propagat., pp.1-2641-2649,2004.10');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Solving time domain electric field integral equation without the time variable','54권, 1호, pp.1-258-262,2006.01');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Conditions for generation of stable and accurate hybrid TD-FD MoM solutions','pp.1,2006.06');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'TD-CFIE formulation for transient electromagnetic scattering from 3-D dielectric objects','ETRI Journal, 29권, 1호, pp.1-8-17,2007.02');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'A comparison of marching-on in time method with marching-on in degree method for the TDIE solver','Progress In Electromagnetics Research, 70권, pp.1-281-296,2007.02');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Analysis of transient electromagnetic scattering with plane wave incidence using MOD-FDM','Progress In Electromagnetics Research, 77권, pp.1-111-120,2007.08');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Solving time domain Helmholtz wave equation with MOD-FDM','Progress In Electromagnetics Research, 79권, pp.339-352,2008.01');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Transient wave propagation in a general dispersive media using the Laguerre functions in a marching-on-in-degree (MOD) methodology','PROGRESS IN ELECTROMAGNETICS RESEARCH, 118권, 1호, pp.135-149,2011.06');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Analysis of arbitrary frequency-dependent losses associated with conducting structures in a time-domain electric field integral equation','IEEE ANTENNAS AND WIRELESS PROPAGATION LETTERS, 10권, 1호, pp.678-681,2011.07');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'An improved marching-on-in-degree method using a new temporal basis','IEEE TRANSACTIONS ON ANTENNAS AND PROPAGATION, 59권, 12호, pp.4643-4650,2011.12');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Analysis of transient wave propagation in an arbitrary frequency-dispersive media using the associated Laguerre functions in the FDTD-MOD method','Microwave Opt. Technol. Lett., 54권, 4호, pp.925-930,2012.04');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'Choice of the scaling factor in a marching-on-in-degree time domain technique based on the associated Laguerre functions','IEEE Trans. Antennas and Propag., 60권, 9호, pp.925-930,2012.09');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(6, 'A study on the numerical accuracy of the matrix elements in a time domain MOD methodology','Progress In Electromagnetics Research M, 33권, 1호, pp.185-196,2013.10');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'실시간 영상 감시를 위한 웹 카메라 시스템 구현에 관한 연구','한국전기전자학회 논문지, 5권, 2호, pp.1-174-181,2001.11');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'고속 움직임 예측기 설계 및 구현','한국통신학회 논문집, 27권, 1호, pp.1,2002.01');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'Teleremote를 이용한 원격 제어 시스템 구현','한국통신학회논문지, 28권, 12B호, pp.1-1115-1123,2003.12');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'DTV 수신을 위한 소프트웨어 Demulitiplexer 개발','전기전자학회논문지, 7권, 2호, pp.1-188-196,2003.12');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'The Development of the USB-DMB Receiver','한국음향학회지, 23권, 3E호, pp.1-74-78,2004.09');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'DAB 기반의 EPG Provider 시스템 개발','전자공학회논문지, 41권, 12호, pp.1-10,2004.12');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'스팸 메일 차단 신뢰도 향상을 위한 SMBC 플랫폼 설계','한국통신학회논문지, 30권, 11B호, pp.1-730,2005.11');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'스트리밍 데이터를 위한 적응적 실시간 트래픽 할당 기법','전자공학회논문지, 43권, 3호, pp.1-111-117,2006.03');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'향상된 차단 성능 지원을 위한 SMBC 플랫폼 개발','인터넷정보논문지, pp.1,2007.01');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'향상된 차단 성능 지원을 위한 SMBC 플랫폼 개발','한국인터넷 정보학회논문지, 8권, 2호, pp.1-6,2007.04');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'TIT 기반에 IP-TV 플랫폼의 신뢰성 향상을 위한 방송 모니터 개발','한국인터넷정보학회, 8권, 5호, pp.1-8,2007.10');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'무선 랜 멀티미디어 서비스의 QoS 공정성 보장','전기전자학회논문지, 12권, 4호, pp.196-203,2008.12');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'무선랜 QoS의 성능향상을 위한 최적 파라미터에 관한 연구','전기전자학회논문지, 17권, 2호, pp.96-103,2013.06');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'802.11e 시스템의 TXOP 및 우선순위 파라미터 영향분석','공업기술연구논문지, 32권, 1호, pp.59-66,2013.06');
-insert into THESIS(PROFESSOR_NO, THESIS_NAME, THESIS_DESC) values(7,'TMN 기반 RRSiM(Real Resource SiMulator)','공업기술연구 논문지, 32권, 2호, pp.73-84,2013.12');
 
 insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'A Study on ADSL Transmission of DMT based on the Subscriber Line', '음성통신및 신호처리 학술대회,2000.08');
 insert into PRESENTATION(PROFESSOR_NO, PRESENTATION_NAME, PRESENTATION_DESC) values(1, 'Embedded System을 위한 Windows-CE의 Porting', '대한전자공학회 호서지부 추계학술발표회,2000.10');
@@ -224,14 +187,12 @@ insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_
 insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(4, '디지털 논리와 VHDL을 이용한 회로설계', to_date('2003.06.25','yyyy.mm.dd'), '홍릉과학출판사');
 insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(4, 'TMS320C6711 DSP 실험실습', to_date('2005.02.28','yyyy.mm.dd'), '한성출판사');
 insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(4, '무선통신실습을 위한 AVR 마이컴 활용', to_date('2011.03.31','yyyy.mm.dd'), 'NewIT 인재양성센터');
-insert into WRITING(PROFESSOR_NO, WRITING_NAME, WRITING_DATE, WRITING_PUBLISHER_NAME) values(6, 'Time and Frequency Domain Solutions of EM Problems Using Integral Equations and a Hybrid Methodology', to_date('2010.10.01','yyyy.mm.dd'), 'Wiley');
-
 
 insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(9, '분산보상 광섬유 및 가변 다중 파장 레이저를 이용한 위상배열 안테나', to_date('2011.06.03','yyyy.mm.dd'), '특허청', '1012365980000');
 insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(3, '수중 음향 통신 시스템 및 통신 방법', to_date('2010.08.30','yyyy.mm.dd'), '한국해양연구원', '10-0980091');
 insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(5, '모폴로지 기법을 이용한 티에프디 엘시디 결함 검출 및분류방법', to_date('2006.12.18','yyyy.mm.dd'), '호서대학교', '10-0661013/10-2005-0054525');
 insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(5, '매크로블록의 부호화 모드 고속 결정 방법', to_date('2007.12.26','yyyy.mm.dd'), '호서대학교 산학협력단', '2007-0137651/10-0943636');
-insert into PATENT(PROFESSOR_NO, PATENT_NAME, PATENT_REGISTER_DATE, PATENT_REGISTER_ORGANIZATION, PATENT_REGISTER_NUMBER) values(7, '승객 안내시스템의 제어장치 및 방법(Apparatus and method for controlling passenger information system)', to_date('2010.02.25','yyyy.mm.dd'), '호서대학교 산학협력단', '10-0945657-0000');
+
 
 
 
