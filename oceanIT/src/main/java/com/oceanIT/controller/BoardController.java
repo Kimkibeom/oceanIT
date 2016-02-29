@@ -121,27 +121,44 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/Board.do")
-	public String gotoBoard(ModelMap model) throws Exception {
-		model.addAttribute("BoardList", bservice.selectBoardList());
+	public String gotoBoard(ModelMap model, HttpServletRequest request, @RequestParam("no") String no,
+			@RequestParam("boardPage") int boardPage) throws Exception {
+		request.getSession().setAttribute("no", no);
+		
+		int boardCnt = bservice.selectBoardCnt(Integer.parseInt(no));
+		int startPage = 1, endPage = (boardCnt / BOARD_PER_PAGE) + 1;
+		model.addAttribute("lastPage", endPage - 1);
+		if (BOARD_PER_PAGE * 9 < boardCnt) {
+			startPage += ((boardPage - 1) / 10) * 10;
+			endPage = startPage + 9;
+		}
+
+		model.addAttribute("startPage", startPage);
+		model.addAttribute("endPage", endPage);
+		model.addAttribute("boardPage", boardPage);
+		
+		model.addAttribute("BoardList",
+				bservice.selectBoardListByPage(boardPage, BOARD_PER_PAGE, Integer.parseInt(no)));
 		return "/board/Board";
 	}
-	
-	@RequestMapping(value="/nameSelectBoardList.do")
+
+	@RequestMapping(value = "/nameSelectBoardList.do")
 	public String checkSelectBoard(ModelMap model, @RequestParam("Select_Name") String select) throws Exception {
-		if(select.equals("Board_Title")) 
+		if (select.equals("Board_Title"))
 			return "forward:/SelectTitleBoardList.do";
 		else
 			return "forward:/SelectTitleContentBoardList.do";
 	}
-	
-	@RequestMapping(value="/SelectTitleBoardList.do")
+
+	@RequestMapping(value = "/SelectTitleBoardList.do")
 	public String getSelectTitleBoard(ModelMap model, @RequestParam("Title") String boardTitle) throws Exception {
 		model.addAttribute("BoardList", bservice.selectBoardByBoardTitle(boardTitle));
 		return "/board/Board";
 	}
-	
-	@RequestMapping(value="/SelectTitleContentBoardList.do")
-	public String getSelectTitleContentBoard(ModelMap model, @RequestParam("Title") String boardTitleContent) throws Exception {
+
+	@RequestMapping(value = "/SelectTitleContentBoardList.do")
+	public String getSelectTitleContentBoard(ModelMap model, @RequestParam("Title") String boardTitleContent)
+			throws Exception {
 		model.addAttribute("BoardList", bservice.selectBoardByBoardTitleContent(boardTitleContent));
 		return "/board/Board";
 	}
@@ -153,4 +170,15 @@ public class BoardController {
 		log.info("comment : " + comment);
 		return "/board/CommunityView";
 	}
+
+	@RequestMapping(value = "/sendFromLeft.do")
+	public String leftMenuSent(ModelMap model, @RequestParam("no") String no)
+			throws Exception {
+		switch(Integer.parseInt(no)){
+		case 1:
+		}
+		
+		return "/board/Board";
+	}
+	
 }
