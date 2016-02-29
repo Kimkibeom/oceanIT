@@ -31,7 +31,6 @@ public class BoardService {
 	}
 	
 	public List<BoardVO> selectBoardByBoardTitle(String boardTitle) {
-		log.info("가나다라마" + boardTitle);
 		return bdao.selectBoardByBoardTitle(boardTitle);
 	}
 	
