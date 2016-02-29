@@ -64,18 +64,31 @@
 				</div>
 				<div style="text-align: center;">
 					<!-- paging -->
-					&lt
+					<%-- start = ${startPage },end = ${endPage }, boardPage = ${boardPage }
+					last = ${lastPage } --%>
+					<c:if test="${startPage != 1 }">
+						<a href="/controller/Community.do?no=5&boardPage=1">[처음]</a>
+						<a
+							href="/controller/Community.do?no=5&boardPage=${startPage - 10 }">[이전]</a>
+					</c:if>
 					<c:forEach begin="${startPage }" end="${endPage }" var="pageindex">
 						<c:choose>
-							<c:when test="${boardPage }=${pageindex }">
-								<div>${pageindex }</div>
+							<c:when test="${boardPage == pageindex }">
+								<span style="color: black;">[${pageindex }]</span>
 							</c:when>
 							<c:otherwise>
-								<a href="/controller/Community.do?no=5&boardPage=${pageindex }">${pageindex }</a>
+								<c:if test="${endPage <= lastPage}">
+									<a style="color: purple;"
+										href="/controller/Community.do?no=5&boardPage=${pageindex }">[${pageindex }]</a>
+								</c:if>
 							</c:otherwise>
 						</c:choose>
 					</c:forEach>
-					&gt
+					<c:set value="${startPage + 10}" var="gtvar"></c:set>
+					<c:if test="${startPage + 10 <= lastPage}">
+						<a href="/controller/Community.do?no=5&boardPage=${gtvar }">[다음]</a>
+						<a href="/controller/Community.do?no=5&boardPage=${lastPage }">[끝]</a>
+					</c:if>
 				</div>
 			</div>
 		</div>
